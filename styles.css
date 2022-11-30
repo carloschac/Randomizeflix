@@ -1,0 +1,36 @@
+:root {
+  --title: #fffcf9;
+  --subtitle: #b3b3b3;
+  --bg-button: #e9e6e3;
+  --background: linear-gradient(43deg, #102d71 0%, #000000 52%, #c12a23 100%);
+}
+
+body {
+  background: var(--background) !important;
+}
+
+.randomize-icon {
+  text-align: center;
+}
+
+.randomize-icon img {
+  width: 90px;
+}
+
+.randomize-tittle h1 {
+  color: var(--title);
+}
+
+.randomize-button button {
+  background-image: url(/assets/favico/favicon-32x32.png);
+  background-repeat: no-repeat;
+  background-position: 6%;
+  background-color: var(--bg-button);
+  padding: 11px 17px 11px 72px;
+  border: none;
+  border-radius: 4px;
+}
+
+.randomize-description {
+  color: var(--subtitle);
+}
