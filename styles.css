@@ -50,6 +50,7 @@ body {
 
 .movie-div {
   width: 16%;
+  height: 233px;
 }
 
 .movie-image {
@@ -58,9 +59,10 @@ body {
 }
 
 .movie-tittle-div {
-  width: 27%;
+  width: 38%;
   padding-left: 28px;
   text-align: initial;
+  max-height: 426px;
 }
 
 .movie-tittle-div h1,

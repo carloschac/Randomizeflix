@@ -5,7 +5,7 @@ console.log(url);
 
 $("#atualizaFilme").click(function () {
   // Solicitação GET.
-  fetch(url)
+  fetch(url + language)
     .then((response) => response.json())
     .then((output) => {
       console.log(output);
