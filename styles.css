@@ -6,7 +6,12 @@
 }
 
 body {
+}
+
+.background {
   background: var(--background) !important;
+  width: 100vw;
+  height: 100vh;
 }
 
 .randomize-icon {
