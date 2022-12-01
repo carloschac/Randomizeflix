@@ -1,11 +1,26 @@
-import { API_KEY, BASE_URL, IMG_URL, language } from "/api.js";
+import { API_KEY, BASE_URL, IMG_URL, language, randomMovie } from "/api.js";
 
-// Solicitação GET.
-fetch(API_KEY, {
-  method: "GET",
-  headers: { "Content-type": "application/json;charset=UTF-8" },
-})
-  // Tratamento do sucesso
-  .then((response) => response.json()) // converter para json
-  .then((json) => console.log(json)) //imprimir dados no console
-  .catch((err) => console.log("Erro de solicitação", err)); // lidar com os erros por catch
+var url = BASE_URL + randomMovie + API_KEY;
+console.log(url);
+
+$("#atualizaFilme").click(function () {
+  // Solicitação GET.
+  fetch(url)
+    .then((response) => response.json())
+    .then((output) => {
+      console.log(output);
+      $(".randomize-content").html(`
+        <div class="movie-div">
+        <img src="${IMG_URL + output.poster_path}" class="movie-image"></img>
+        </div>
+        <div class="movie-tittle-div">
+        <h1 class="movie-tittle">${output.original_title}</h1>
+        <p>${output.overview}</p><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        </div>
+`);
+    })
+    .catch((error) => console.log(error));
+});

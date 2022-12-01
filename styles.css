@@ -6,12 +6,15 @@
 }
 
 body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
 }
 
 .background {
   background: var(--background) !important;
-  width: 100vw;
-  height: 100vh;
+  background-size: 100% !important;
+  padding-top: 6rem;
+  height: 100%;
 }
 
 .randomize-icon {
@@ -38,4 +41,33 @@ body {
 
 .randomize-description {
   color: var(--subtitle);
+}
+
+.randomize-content {
+  display: flex;
+  justify-content: center;
+}
+
+.movie-div {
+  width: 16%;
+}
+
+.movie-image {
+  width: 200px;
+  height: 233px;
+}
+
+.movie-tittle-div {
+  width: 27%;
+  padding-left: 28px;
+  text-align: initial;
+}
+
+.movie-tittle-div h1,
+p {
+  color: var(--title);
+}
+
+.movie-tittle-div p {
+  font-size: 15px;
 }
